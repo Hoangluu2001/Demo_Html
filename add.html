@@ -42,8 +42,6 @@
 
 
 
-    
-
    
   <div class="col-md-8"   style="margin-left: 300px">
     <!-- jquery validation -->
@@ -123,14 +121,61 @@
           <span class="form-message"></span>
         </div>
 
-       <button class="btn btn-success" class="form-submit">Add Student </button>
+       <button onclick="showErrorToast();" class="btn btn-success" class="form-submit">Add Student </button>
         <a class="btn btn-warning" class="nav-link" href="demo.html">Exit</a>
       </form>
+
+
+
+      <div id="toast"></div>
+  
+      <!-- <div>
+        <div onclick="showSuccessToast();" class="btn btn--success">Show success toast</div>
+        <div onclick="showErrorToast();" class="btn btn--danger">Show error toast</div>
+      </div> -->
+
+
+
+
 
     </div>
     </div>
     </div>
+
+
+
+<!-- dung toast de hien thi thong bao khi add thanh cong  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+  
+  
+    <script>
+      function showSuccessToast() {
+        toast({
+          title: "Thành công!",
+          message: "Bạn đã thêm sinh viên thành công ^^",
+          type: "success",
+          duration: 5000
+        });
+      }
     
+      function showErrorToast() {
+        toast({
+          title: "Thất bại!",
+          message: "Có lỗi xảy ra, vui lòng thử lại ",
+          type: "error",
+          duration: 5000
+        });
+      }
+    </script>
+  
+
+    
+
+
+
+  <!-- validate cho form add  -->
 
     <script>
 
@@ -156,6 +201,9 @@
       });
 
     </script>
+
+
+    
 
 
 </body>
